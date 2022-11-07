@@ -1,0 +1,44 @@
+<h1>{{opcion}}</h1>
+
+
+<div *ngIf="(opcion=='Insertar') ||(opcion=='Modificar')">
+    <div>
+        <mat-form-field >
+            <mat-label>Nombre</mat-label>
+            <input [(ngModel)]='this.nameArt' matInput>
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>Codigo</mat-label>
+            <input [(ngModel)]='this.cod' matInput>
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>Descripción</mat-label>
+            <input [(ngModel)]='this.descArt' matInput>
+        </mat-form-field> 
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>Cantidad</mat-label>
+            <input [(ngModel)]='this.cant' matInput>
+        </mat-form-field> 
+    </div>
+</div>
+
+
+<div *ngIf="(opcion=='Eliminar')||(opcion=='Modificar')">
+    <div>
+        <mat-form-field >
+            <mat-label>Id</mat-label>
+            <input [(ngModel)]='this.id' matInput>
+        </mat-form-field> 
+    </div>
+</div>
+
+
+<div>
+        <button mat-raised-button color="primary" style="margin: 10px" (click)="enviar()">Enviar</button>
+</div>
